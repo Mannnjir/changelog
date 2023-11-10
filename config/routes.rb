@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get :current_release
   end
 
-  match mount_at => 'changelog#release_notes'
+  match mount_at, to: 'changelog#release_notes', via: [:get, :post]
+  
 end
